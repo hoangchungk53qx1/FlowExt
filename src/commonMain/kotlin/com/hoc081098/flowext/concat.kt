@@ -1,7 +1,7 @@
 /*
  * MIT License
  *
- * Copyright (c) 2021-2023 Petrus Nguyễn Thái Học
+ * Copyright (c) 2021-2024 Petrus Nguyễn Thái Học
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -169,6 +169,22 @@ public fun <T> Flow<T>.concatWith(others: Sequence<Flow<T>>): Flow<T> {
   }
 }
 
+/**
+ * This function is an alias to [concatWith] operator.
+ *
+ * Returns a [Flow] that emits the items emitted from this [Flow], then the next, one after the other, without interleaving them.
+ *
+ * Example:
+ * ``` kotlin
+ * val flow1 = flowOf(1, 2, 3)
+ * val flow2 = flowOf(4, 5, 6)
+ * val result = flow1 + flow2 // produces the following emissions 1, 2, 3, 4, 5, 6
+ * ```
+ *
+ * @see concatWith
+ */
+public operator fun <T> Flow<T>.plus(other: Flow<T>): Flow<T> = concat(this, other)
+
 //
 // startWith
 //
@@ -267,19 +283,3 @@ public fun <T> Flow<T>.startWith(others: Sequence<T>): Flow<T> = concat(others.a
  * Returns a [Flow] that emits the items in a specified [Flow] before it begins to emit items emitted by the current [Flow].
  */
 public fun <T> Flow<T>.startWith(other: Flow<T>): Flow<T> = concat(other, this)
-
-/**
- * This function is an alias to [concatWith] operator.
- *
- * Returns a [Flow] that emits the items emitted from this [Flow], then the next, one after the other, without interleaving them.
- *
- * @see concatWith
- *
- * Example:
- * ``` kotlin
- *  val flow1 = flowOf(1, 2, 3)
- *  val flow2 = flowOf(4, 5, 6)
- *  val result = flow1 + flow2 // produces the following emissions 1, 2, 3, 4, 5, 6
- * ```
- */
-public operator fun <T, R : T> Flow<T>.plus(other: Flow<R>): Flow<T> = concat(this, other)

@@ -1,7 +1,7 @@
 /*
  * MIT License
  *
- * Copyright (c) 2021-2023 Petrus Nguyễn Thái Học
+ * Copyright (c) 2021-2024 Petrus Nguyễn Thái Học
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -35,13 +35,3 @@ import kotlin.jvm.JvmField
 @DelicateFlowExtApi
 @JvmField
 public val NULL_VALUE: Symbol = Symbol("NULL_VALUE")
-
-/**
- * This is a work-around for having nested nulls in generic code.
- * This allows for writing faster generic code instead of using `Option`.
- * This is only used as an optimisation technique in low-level code.
- *
- * This is internal and should not be used outside of the library.
- */
-@JvmField
-internal val INTERNAL_NULL_VALUE: Symbol = Symbol("INTERNAL_NULL_VALUE")
