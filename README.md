@@ -5,8 +5,9 @@
 [![Build](https://github.com/hoc081098/FlowExt/actions/workflows/build.yml/badge.svg)](https://github.com/hoc081098/FlowExt/actions/workflows/build.yml)
 [![Validate Gradle Wrapper](https://github.com/hoc081098/FlowExt/actions/workflows/gradle-wrapper-validation.yml/badge.svg)](https://github.com/hoc081098/FlowExt/actions/workflows/gradle-wrapper-validation.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Kotlin version](https://img.shields.io/badge/Kotlin-1.9.22-blueviolet?logo=kotlin&logoColor=white)](http://kotlinlang.org)
-[![KotlinX Coroutines version](https://img.shields.io/badge/Kotlinx_Coroutines-1.8.0-blueviolet?logo=kotlin&logoColor=white)](https://github.com/Kotlin/kotlinx.coroutines/releases/tag/1.8.0)
+[![Kotlin version](https://img.shields.io/badge/Kotlin-2.0.20-blueviolet?logo=kotlin&logoColor=white)](https://github.com/JetBrains/kotlin/releases/tag/v2.0.20)
+[![KotlinX Coroutines version](https://img.shields.io/badge/Kotlinx_Coroutines-1.9.0-blueviolet?logo=kotlin&logoColor=white)](https://github.com/Kotlin/kotlinx.coroutines/releases/tag/1.9.0)
+[![klibs.io](https://img.shields.io/badge/KLIBS_IO-blueviolet?logo=kotlin&logoColor=white)](https://klibs.io/project/hoc081098/FlowExt)
 ![badge][badge-android]
 ![badge][badge-wearos]
 ![badge][badge-android-native]
@@ -32,6 +33,8 @@
     <img src="https://github.com/hoc081098/FlowExt/raw/master/logo.png" width="400">
 </p>
 
+<details>
+
 > Kotlinx Coroutines Flow Extensions. Extensions to the Kotlin Flow library. Kotlin Flow extensions.
 > Multiplatform Kotlinx Coroutines Flow Extensions. Multiplatform Extensions to the Kotlin Flow
 > library. Multiplatform Kotlin Flow extensions. RxJS Kotlin Coroutines Flow. RxSwift Kotlin
@@ -40,6 +43,8 @@
 > Flow. RxJS Coroutines Flow. RxSwift Coroutines Flow. RxJava Coroutines Flow. Kotlin Flow
 > operators.
 > Coroutines Flow operators.
+
+</details>
 
 ## Author: [Petrus Nguyễn Thái Học](https://github.com/hoc081098)
 
@@ -63,9 +68,11 @@ Liked some of my work? Buy me a coffee (or more likely a beer)
 
 ## API
 
-> **Note**: This is still a relatively early version of FlowExt, with much more to be desired. I gladly accept PRs, ideas, opinions, or improvements. Thank you! :)
+> **Note**: I gladly accept PRs, ideas, opinions, or improvements. Thank you! :)
 
 ### 0.x release docs: https://hoc081098.github.io/FlowExt/docs/0.x
+
+### 1.x release docs: https://hoc081098.github.io/FlowExt/docs/1.x
 
 ### Snapshot docs: https://hoc081098.github.io/FlowExt/docs/latest
 
@@ -83,7 +90,7 @@ allprojects {
 ### Multiplatform
 
 ```groovy
-implementation("io.github.hoc081098:FlowExt:0.8.1-Beta")
+implementation("io.github.hoc081098:FlowExt:1.0.0")
 ```
 
 ### Snapshot
@@ -102,7 +109,7 @@ allprojects {
 }
 
 dependencies {
-  implementation("io.github.hoc081098:FlowExt:0.8.2-SNAPSHOT")
+  implementation("io.github.hoc081098:FlowExt:1.0.1-SNAPSHOT")
 }
 ```
 
@@ -117,7 +124,7 @@ allprojects {
 }
 
 dependencies {
-  implementation("io.github.hoc081098:FlowExt:0.8.2-SNAPSHOT")
+  implementation("io.github.hoc081098:FlowExt:1.0.1-SNAPSHOT")
 }
 ```
 
@@ -1514,7 +1521,7 @@ withLatestFrom: (3, 4)
 withLatestFrom: (4, 6)
 ```
 
-... and more, please check out [Docs 0.x](https://hoc081098.github.io/FlowExt/docs/0.x)/[Docs
+... and more, please check out [Docs 1.x](https://hoc081098.github.io/FlowExt/docs/1.x)/[Docs
 snapshot](https://hoc081098.github.io/FlowExt/docs/latest).
 
 ## License

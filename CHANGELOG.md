@@ -1,6 +1,56 @@
 # Change Log
 
-## [Unreleased] - TBD
+## [Unreleased]
+
+## [1.0.0] - Sep 22, 2024
+
+This is our first stable release! Thanks everyone for using FlowExt, reporting bugs, providing feedback and sending PRs.
+
+### Changed
+
+- Update dependencies:
+  - [Kotlin `2.0.20`](https://github.com/JetBrains/kotlin/releases/tag/v2.0.20).
+  - [KotlinX Coroutines `1.9.0`](https://github.com/Kotlin/kotlinx.coroutines/releases/tag/1.9.0).
+
+- Promote `Flow.repeat` operators to stable.
+
+- `Event.Value` and `Event.Error` are now normal classes annotated with [@Poko](https://github.com/drewhamilton/Poko)
+  (previously they were `data class`es).
+
+## [1.0.0-RC] - May 30, 2024
+
+### Changed
+
+- Update dependencies:
+  - [Kotlin `2.0.0`](https://github.com/JetBrains/kotlin/releases/tag/v2.0.0).
+  - [KotlinX Coroutines `1.9.0-RC`](https://github.com/Kotlin/kotlinx.coroutines/releases/tag/1.9.0-RC).
+
+- Promote `Flow.repeat` operators to stable.
+
+## [0.8.1] - May 11, 2024
+
+### Changed
+
+- Update dependencies:
+  - [Kotlin `1.9.24`](https://github.com/JetBrains/kotlin/releases/tag/v1.9.24).
+  - [KotlinX Coroutines `1.8.1`](https://github.com/Kotlin/kotlinx.coroutines/releases/tag/1.8.1).
+  - `Gradle` to `8.7`.
+
+### Added
+
+- Add `Flow.catchAndReturn`, `Flow.catchAndResume` operators.
+- Add `Flow.mapToResult`, `Flow.mapResultCatching`, `Flow.throwFailure` operators.
+
+### Changed
+
+- `Flow.chunked(bufferSize: Int)` / `Flow.bufferCount(bufferSize: Int)`: reduce unnecessary allocations.
+
+##### Changelog relative to version [0.8.1-Beta]
+
+- `Flow.mapResultCatching` now does not catch `CancellationException`
+  thrown from the `transform` lambda.
+
+- [Kotlin `1.9.24`](https://github.com/JetBrains/kotlin/releases/tag/v1.9.24).
 
 ## [0.8.1-Beta] - Mar 23, 2024
 
@@ -262,7 +312,10 @@
 
 - Test for Publishing.
 
-[Unreleased]: https://github.com/hoc081098/FlowExt/compare/0.8.1-Beta...HEAD
+[Unreleased]: https://github.com/hoc081098/FlowExt/compare/1.0.0...HEAD
+[1.0.0]: https://github.com/hoc081098/FlowExt/releases/tag/1.0.0
+[1.0.0-RC]: https://github.com/hoc081098/FlowExt/releases/tag/1.0.0-RC
+[0.8.1]: https://github.com/hoc081098/FlowExt/releases/tag/0.8.1
 [0.8.1-Beta]: https://github.com/hoc081098/FlowExt/releases/tag/0.8.1-Beta
 [0.8.0]: https://github.com/hoc081098/FlowExt/releases/tag/0.8.0
 [0.7.5]: https://github.com/hoc081098/FlowExt/releases/tag/0.7.5
